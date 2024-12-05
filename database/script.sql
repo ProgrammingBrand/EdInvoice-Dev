@@ -1,0 +1,53 @@
+CREATE DATABASE facturas;
+
+use facturas;
+
+CREATE TABLE alumnos(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  Nombre VARCHAR(255) NOT NULL,
+  ApellidoP VARCHAR(255) NOT NULL,
+  ApellidoM VARCHAR(255) NOT NULL,
+  FechaN int(4),
+  CURP VARCHAR(19) NOT NULL,
+  NivelEducativo VARCHAR(19) NOT NULL,
+  Grado VARCHAR(19) NOT NULL,
+  Matricula VARCHAR(19) NOT NULL,
+  FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE padres(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  Nombre VARCHAR(255) NOT NULL,
+  ApellidoP VARCHAR(255) NOT NULL,
+  ApellidoM VARCHAR(255) NOT NULL,
+  Direccion VARCHAR(255) NOT NULL,
+  CP int(10),
+  FechaN int(4),
+  RFC VARCHAR(19) NOT NULL,
+  RegimenFiscal VARCHAR(200) NOT NULL,
+  FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Administrativos(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  Usuario VARCHAR(255) NOT NULL,
+  Contrasenia VARCHAR(255) NOT NULL,
+  NombreCompleto VARCHAR(255) NOT NULL,
+  Permisos VARCHAR(255) NOT NULL,
+  FechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Bitacora(
+  id INT(11) PRIMARY KEY AUTO_INCREMENT,
+  Usuario VARCHAR(255) NOT NULL,
+  Accion VARCHAR(255) NOT NULL,
+  Fecha DATE NOT NULL DEFAULT CURRENT_DATE,
+  Hora TIME NOT NULL DEFAULT CURRENT_TIME
+);
+
+INSERT INTO Administrativos (Usuario, Contrasenia, NombreCompleto, Permisos) 
+VALUES 
+('Director', 'admin1234', 'Luis Gomez Hernandez', 'admin'),
+('Contador', 'user1234', 'Luis Perez Prado', 'usuario');
+
+
