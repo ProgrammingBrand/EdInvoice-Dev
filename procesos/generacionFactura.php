@@ -95,9 +95,6 @@
           <p><strong>Nombre del Padre:</strong> </p>
           <p><strong>RFC:</strong> <form action="/buscar" method="get">
       <label for="criterio"> </label>
-      <select id="criterio" name="criterio" required>
-      <option value="rfc">CONCEPTO</option>
-      <option value="curp">CANTIDAD</option>
       </select> </p>
     
           <p><strong>Nombre del Hijo:</strong> </p>
