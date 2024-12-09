@@ -2,9 +2,9 @@
 $conn = mysqli_connect(
     'localhost',
     'root',
-    'con.1234',
+    '',
     'facturas'
-) or die(mysqli_erro($mysqli));
+) or die(mysqli_error($mysqli));
 
 if (isset($_POST['btnRegistrarAlumno'])) {
     // Obtener los datos del formulario
